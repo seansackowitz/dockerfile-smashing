@@ -17,7 +17,6 @@ function install_gems() {
     for GEM in $GEMS; do
       echo -e "\ngem '$GEM'" >> Gemfile
     done
-    bundle install
   fi
 }
 
@@ -32,6 +31,8 @@ if [[ ! -e /installed ]]; then
   install_gems $GEMS
   touch /installed
 fi
+
+bundle install
 
 if [[ ! -z "$PORT" ]]; then
   PORT_ARG="-p $PORT"

@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get update && \
     apt-get -y install nodejs git && \
     apt-get -y clean
-RUN gem install bundler smashing
+RUN gem install --no-rdoc --no-ri bundler smashing
 RUN mkdir /smashing
 
 COPY run.sh /
