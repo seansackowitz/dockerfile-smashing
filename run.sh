@@ -22,7 +22,7 @@ function install_gems() {
 }
 
 if [[ ! -e /smashing/config.ru ]]; then
-  git clone https://$GIT_USERNAME:$GIT_TOKEN@GIT_REPO_URI .
+  git clone https://$GIT_USERNAME:$GIT_TOKEN@$GIT_REPO_URI .
 else
   git pull
 fi
